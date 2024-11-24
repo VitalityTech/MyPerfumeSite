@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abyssinica+SIL&family=Julius+Sans+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.scrolling-text {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #d03050;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.scrolling-text .text-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 40s linear infinite;
+  white-space: nowrap;
+}
+
+.scrolling-text.hidden {
+  opacity: 0; /* Зникає поступово */
+  visibility: hidden; /* Приховує елемент */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-container {
+  padding-top: 120px;
+}
+
+.banner-img {
+  background: url("../img/header-img/banner .png") no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 100vh;
+  margin-top: 30px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 80px;
+  margin-top: -35px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  font-size: 19px;
+  font-family: "Abyssinica SIL", serif;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #d03050;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.container-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: -100px;
+}
+
+.header-text {
+  text-align: center;
+  margin-top: -40px;
+  font-size: 24px;
+  line-height: 0.9;
+}
+
+.text-center {
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.filter-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 150px;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.parfum-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.parfum-name {
+  font-weight: 500;
+  font-family: "Abyssinica SIL", serif;
+  font-size: 20px;
+  text-align: cneter;
+}
+
+.parfum-description {
+  font-family: "Abyssinica SIL", serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.parfum-details {
+  line-height: 1.7;
+}
+
+.parfum-volume {
+  font-size: 25px;
+}
+
+.ml {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.buy-button {
+  font-size: 16px;
+  font-family: "Abyssinica SIL", serif;
+  font-weight: 400;
+  padding: 10px 38px;
+  border-radius: 50px;
+  border: 1px solid #d03050;
+  color: #d03050;
+  background: #ffffffff;
+  transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #d03050;
+  color: #ffffff;
+  border-color: #b02040;
+}
+
+.more-section {
+  margin-top: 200px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-button {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 100px;
+  padding: 15px 35px;
+  color: #ffffff;
+  background: #b02040;
+  border: 3px solid #ed9999;
+  border-radius: 15px;
+  font-family: "Abyssinica SIL", serif;
+}
+
+.btn-button:hover {
+  color: #b02040;
+  background: #ffffff;
+  border-color: #b02040;
+  box-shadow: 0px 0px 15px rgba(176, 32, 64, 0.7);
+  transform: scale(1.05);
+}
+
+.footer-section {
+  background-color: #d14952;
+  padding: 40px 20px;
+  margin-top: 100px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-footer-info {
+  text-align: left;
+  margin: 0 20px;
+  min-width: 150px;
+}
+
+.footer-title {
+  font-family: "ABeeZee", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #ffff;
+  text-decoration: underline;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Abyssinica SIL", serif;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 35px;
+}
+
+.footer-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.footer-center-title {
+  font-size: 42px;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+}
+
+.footer-flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-nav-block-one {
+  display: flex;
+}
+
+.footer-nav-block-two {
+  display: flex;
+}
+
+.navbar-link {
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Abyssinica SIL", serif;
+}
+
+/* ------------------------------------------- */
+
+@media (max-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding: 10px;
+    min-width: 320px;
+  }
+
+  .container-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  .header-text {
+    padding-top: 5px;
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .text-block {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .more-section {
+    display: block;
+    margin-top: -20px;
+  }
+
+  .info-content {
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .btn-button {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-title {
+    display: flex;
+  }
+
+  .footer-center-block {
+    display: none;
+  }
+
+  .footer-img-container {
+    display: flex;
+  }
+
+  .footer-nav-block-one {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .footer-nav-block-two {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .header-text {
+    margin-top: 30px;
+  }
+
+  .more-section {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-title {
+    display: flex;
+  }
+
+  .footer-center-block {
+    display: none;
+  }
+
+  .footer-img-container {
+    display: flex;
+  }
+
+  .footer-nav-block-two {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .header-text {
+    margin-top: 25px;
+  }
+
+  .more-section {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .footer-content {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .parfum-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .parfum-container {
+    width: 100%;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .filter-icon {
+    display: none;
+  }
+
+  .img-container {
+    margin-top: 50px;
+  }
+
+  .footer-section {
+    /* display: flex; */
+    justify-content: space-betweeen;
+  }
+
+}
